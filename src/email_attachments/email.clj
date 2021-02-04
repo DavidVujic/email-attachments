@@ -22,7 +22,7 @@
   "Extract data as an input stream from a single message-map"
   [message-map]
   (let [data (:data message-map)]
-    (when data (-> data message-content))))
+    (when data (-> data message/message-content))))
 
 (defn content-types
   "Takes an email as an input-stream,
