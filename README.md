@@ -16,7 +16,7 @@ Example - extract a CSV file from an email:
      email/content-stream)
 ```
 
-The `email/content-stream` will return the attached file as an `input-stream`.
+The `email/content-stream` will return the attached file as a `stream`.
 
 The library includes some helpers for determining file types:
 
