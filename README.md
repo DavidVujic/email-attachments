@@ -17,6 +17,19 @@ and extract the file content as a stream:
      email/content-stream)
 ```
 
+Example output from `email/content-types`
+
+``` clojure
+({:content-type "text/plain; charset=\"utf-8\"",
+  :data #object[ ... MimeBodyPart ... ]}
+
+ {:content-type "text/html; charset=\"utf-8\"",
+  :data #object[ ... MimeBodyPart ... ]}
+
+  {:content-type "text/csv;\r\n\tx-unix-mode=0644;\r\n\tname=\"my-csv-file.csv\"",
+  :data #object[ ... MimeBodyPart ... ]})
+```
+
 #### References
 A lot of inspiration and ideas comes from these repositories:
 
