@@ -6,8 +6,7 @@ A Clojure library that makes extracting attachments from email simple.
 
 #### Usage
 
-Example, extract an attached CSV file from an email file as an input stream
-and extract the file content as a stream:
+Example - extract a CSV file from an email:
 
 ``` clojure
 (->> my-email-stream
@@ -17,7 +16,17 @@ and extract the file content as a stream:
      email/content-stream)
 ```
 
-Example output from `email/content-types`
+The `email/content-stream` will return the attached file as an `input-stream`.
+
+The library includes some helpers for determining file types:
+
+``` clojure
+email/csv?
+email/excel?
+email/ms-word?
+```
+
+Example output from the `email/content-types` function:
 
 ``` clojure
 ({:content-type "text/plain; charset=\"utf-8\"",
