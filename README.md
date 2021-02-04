@@ -1,6 +1,6 @@
 ### email-attachments
 
-Makes extracting attachments from email simple.
+A Clojure library that makes extracting attachments from email simple.
 
 #### Usage
 
