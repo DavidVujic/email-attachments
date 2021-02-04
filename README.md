@@ -1,5 +1,7 @@
 ### email-attachments
 
+[![Clojars Project](https://img.shields.io/clojars/v/email-attachments.svg)](https://clojars.org/email-attachments)
+
 A Clojure library that makes extracting attachments from email simple.
 
 #### Usage
