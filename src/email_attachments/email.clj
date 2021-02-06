@@ -18,6 +18,13 @@
   (or (content-type? m "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
       (content-type? m "application/msword")))
 
+(defn pdf? [m]
+  (content-type? m "application/pdf"))
+
+(defn xml? [m]
+  (or (content-type? m "application/xml")
+      (content-type? m "text/xml")))
+
 (defn content-stream
   "Extract data as an input stream from a single message-map"
   [message-map]
