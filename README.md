@@ -9,6 +9,8 @@ A Clojure library that makes extracting attachments from email simple.
 Example - extract a CSV file from an email:
 
 ``` clojure
+;; example: a raw .eml file as an input-stream
+
 (->> my-email-stream
      email/content-types
      (filter email/csv?)
