@@ -26,6 +26,8 @@ The library includes some helpers for determining file types:
 email/csv?
 email/excel?
 email/ms-word?
+email/pdf?
+email/xml?
 ```
 
 Example output from the `email/content-types` function:
