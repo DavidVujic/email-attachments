@@ -30,6 +30,15 @@ email/pdf?
 email/xml?
 ```
 
+There is also a `query` namespace that can be used to extract file names or find an attachment by name:
+
+``` clojure
+(query/filenames content-types) ;; pass in the result from the email/content-types function
+(query/filename content-type) ;; pass in one item from the seq of email/content-types result
+
+(query/find-in content-types "my-filename.csv")
+```
+
 Example output from the `email/content-types` function:
 
 ``` clojure
