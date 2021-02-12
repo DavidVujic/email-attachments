@@ -1,7 +1,6 @@
 (ns email-attachments.email-test
   (:require [clojure.java.io :as io]
-            [email-attachments.email :as email]
-            [email-attachments.query :as query]))
+            [email-attachments.email :as email]))
 
 (comment
   (->> "emails/example2.eml"
@@ -20,13 +19,13 @@
        io/input-stream
        email/content-types
        first
-       query/filename))
+       email/filename))
 
 (comment
   (->> "emails/example2.eml"
        io/input-stream
        email/content-types
-       query/filenames))
+       email/filenames))
 
 (comment
   (def content-types (->> "emails/example4.eml"
@@ -34,4 +33,4 @@
                           email/content-types))
 
   (def filename "email-exempel.csv")
-  (query/find-in content-types filename))
+  (email/find-in content-types filename))

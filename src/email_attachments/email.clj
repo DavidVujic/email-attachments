@@ -1,6 +1,7 @@
 (ns email-attachments.email
   (:require [clojure.string :as str]
-            [email-attachments.message :as message]))
+            [email-attachments.message :as message]
+            [email-attachments.query :as query]))
 
 (defn- content-type? [m type]
   (-> m
@@ -38,3 +39,12 @@
   (->> email-input-stream
        message/stream->mime-message
        message/body))
+
+(defn filename [message-map]
+  (query/filename message-map))
+
+(defn filenames [content-types]
+  (query/filenames content-types))
+
+(defn find-in [content-types filename]
+  (query/find-in content-types filename))
