@@ -33,13 +33,13 @@ email/xml?
 There are also querying helpers, that can be used to extract file names or find an attachment by name:
 
 ``` clojure
-(email/filenames content-types) ;; pass in the result from the email/content-types function
-(email/filename content-type) ;; pass in one item from the seq of email/content-types result
+(email/filenames message-maps) ;; pass in the result from the email/content-types function
+(email/filename message-map)   ;; pass in one item from the seq of the email/content-types result
 
-(email/find-in content-types "my-filename.csv")
+(email/find-in message-maps "my-filename.csv")
 ```
 
-Example output from the `email/content-types` function:
+Example output from the `email/content-types` function, a seq of `message-map`:
 
 ``` clojure
 ({:content-type "text/plain; charset=\"utf-8\"",

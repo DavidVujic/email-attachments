@@ -3,28 +3,28 @@
             [email-attachments.message :as message]
             [email-attachments.query :as query]))
 
-(defn- content-type? [m type]
-  (-> m
+(defn- content-type? [message-map type]
+  (-> message-map
       :content-type
       (str/includes? type)))
 
-(defn csv? [m]
-  (content-type? m "text/csv"))
+(defn csv? [message-map]
+  (content-type? message-map "text/csv"))
 
-(defn excel? [m]
-  (or (content-type? m "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-      (content-type? m "application/vnd.ms-excel")))
+(defn excel? [message-map]
+  (or (content-type? message-map "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+      (content-type? message-map "application/vnd.ms-excel")))
 
-(defn ms-word? [m]
-  (or (content-type? m "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-      (content-type? m "application/msword")))
+(defn ms-word? [message-map]
+  (or (content-type? message-map "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+      (content-type? message-map "application/msword")))
 
-(defn pdf? [m]
-  (content-type? m "application/pdf"))
+(defn pdf? [message-map]
+  (content-type? message-map "application/pdf"))
 
-(defn xml? [m]
-  (or (content-type? m "application/xml")
-      (content-type? m "text/xml")))
+(defn xml? [message-map]
+  (or (content-type? message-map "application/xml")
+      (content-type? message-map "text/xml")))
 
 (defn content-stream
   "Extract data as an input stream from a single message-map"
@@ -41,15 +41,15 @@
        message/body))
 
 (defn filename
-  "Extracts the filename of an attachment in a content-type map"
-  [content-type]
-  (query/filename content-type))
+  "Extracts the filename of an attachment in a message-map"
+  [message-map]
+  (query/filename message-map))
 
 (defn filenames
-  "Extracts the attachment filenames from a seq of content-type maps"
-  [content-types]
-  (query/filenames content-types))
+  "Extracts the attachment filenames from a seq of message-maps"
+  [message-maps]
+  (query/filenames message-maps))
 
 (defn find-in
-  [content-types filename]
-  (query/find-in content-types filename))
+  [message-maps filename]
+  (query/find-in message-maps filename))
