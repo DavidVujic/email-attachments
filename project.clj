@@ -1,4 +1,4 @@
-(defproject email-attachments "1.2.2"
+(defproject email-attachments "1.2.3"
   :description "makes extracting email attachments simple"
   :url "https://github.com/DavidVujic/email-attachments"
   :license {:name "The MIT License (MIT)"
