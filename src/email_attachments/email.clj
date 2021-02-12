@@ -40,11 +40,16 @@
        message/stream->mime-message
        message/body))
 
-(defn filename [message-map]
-  (query/filename message-map))
+(defn filename
+  "Extracts the filename of an attachment in a content-type map"
+  [content-type]
+  (query/filename content-type))
 
-(defn filenames [content-types]
+(defn filenames
+  "Extracts the attachment filenames from a seq of content-type maps"
+  [content-types]
   (query/filenames content-types))
 
-(defn find-in [content-types filename]
+(defn find-in
+  [content-types filename]
   (query/find-in content-types filename))
