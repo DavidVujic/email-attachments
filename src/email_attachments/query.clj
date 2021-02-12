@@ -3,12 +3,12 @@
 (defn filename [{:keys [data]}]
   (.getFileName data))
 
-(defn filenames [content-types]
-  (map filename content-types))
+(defn filenames [message-maps]
+  (map filename message-maps))
 
 (defn- match? [name m]
   (= name (filename m)))
 
-(defn find-in [content-types filename]
-  (-> (filter #(match? filename %) content-types)
+(defn find-in [message-maps filename]
+  (-> (filter #(match? filename %) message-maps)
       seq))

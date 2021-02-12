@@ -3,7 +3,7 @@
             [email-attachments.email :as email]))
 
 (comment
-  (->> "emails/example2.eml"
+  (->> "emails/example4.eml"
        io/input-stream
        email/content-types))
 
@@ -12,7 +12,8 @@
        io/input-stream
        email/content-types
        first
-       email/content-stream))
+       email/content-stream
+       slurp))
 
 (comment
   (->> "emails/excel.eml"

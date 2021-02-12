@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. 
 
+## [1.2.3] - 2021-02-12
+Use the term `message-map` to describe the data passed in to and from the functions of this library.
+
 ## [1.2.2] - 2021-02-12
 Add docs for query functions.
 
