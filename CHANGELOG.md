@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file. 
 
+## [1.2.1] - 2021-02-12
+Wrap querying features from the `query` namespace in the `email` namespace.
+
 ## [1.2.0] - 2021-02-12
 Add `query` namespace, that can be used to extract file names or find an attachment by name.
 
