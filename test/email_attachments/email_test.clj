@@ -74,9 +74,6 @@
        email/filenames))
 
 (comment
-  (def content-types (->> "emails/example4.eml"
-                          io/input-stream
-                          email/content-types))
-
-  (def filename "email-exempel.csv")
-  (email/find-in content-types filename))
+  (def the-content-types (->> "emails/example4.eml" io/input-stream email/content-types))
+  (def the-filename "email-exempel.csv")
+  (email/find-in the-content-types the-filename))
