@@ -1,0 +1,32 @@
+From: David Vujic <david.vujic@not-a-real-address.se>
+Content-Type: multipart/mixed;
+	boundary="Unit-Test-Email=_XXXYYYZZZ_"
+Mime-Version: 1.0 (Mac OS X Mail 14.0 \(3654.40.0.2.32\))
+Subject: Unit test message
+X-Universally-Unique-Identifier: 1111-2222-3333-4444-5555
+Message-Id: <123-456-789-unit-test@not-a-real-address.se>
+Date: Sat, 13 Feb 2021 09:00:46 +0100
+To: David Vujic <david.vujic@this-is-not-a-real-adress.se>
+
+
+--Unit-Test-Email=_XXXYYYZZZ_
+Content-Disposition: attachment;
+	filename=my-example-file.csv
+Content-Type: text/csv;
+	x-unix-mode=0644;
+	name="my-example-file.csv"
+Content-Transfer-Encoding: 7bit
+
+Date,Name,Value
+2021-01-01,A,10
+2021-01-02,A,11
+2021-01-03,A,12
+2021-01-04,A,13
+2021-01-05,A,14
+2021-01-06,A,15
+2021-01-07,A,16
+2021-01-08,A,17
+2021-01-09,A,18
+2021-01-10,A,19
+
+--Unit-Test-Email=_XXXYYYZZZ_--
