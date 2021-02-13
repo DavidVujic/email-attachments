@@ -4,6 +4,8 @@
 
 A Clojure library that makes extracting attachments from email simple.
 
+[![Build Status](https://travis-ci.com/DavidVujic/email-attachments.svg?branch=main)](https://travis-ci.com/DavidVujic/email-attachments)
+
 #### Usage
 
 Example - extract a CSV file from an email:
