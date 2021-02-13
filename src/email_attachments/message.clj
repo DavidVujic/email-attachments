@@ -29,7 +29,7 @@
     (map message-parts (multipart->parts message))
     (conj () message)))
 
-(defn- msg->map [message]
+(defn- message->map [message]
   {:content-type (message-content-type message)
    :data         message})
 
@@ -37,7 +37,7 @@
   (->> message
        message-parts
        flatten
-       (map msg->map)))
+       (map message->map)))
 
 (defn stream->mime-message [stream]
   (MimeMessage. nil stream))
