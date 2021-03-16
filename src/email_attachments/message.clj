@@ -17,7 +17,7 @@
   (.getBodyPart content index))
 
 (defn- multipart? [message]
-  (str/starts-with? (message-content-type message) "multipart/"))
+  (-> message (.isMimeType "multipart/*")))
 
 (defn- multipart->parts [message]
   (let [content       (message-content message)
